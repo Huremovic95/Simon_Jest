@@ -23,5 +23,12 @@ function addTurn() {
     game.currentGame.push(randomButton);
 }
 
+function lightsOn(circel) {
+    document.getElementById(circel).classList.add("light");
+    setTimeout(() => {
+        document.getElementById(circel).classList.remove("light");
+    }, 400);
+}
 
-module.exports = { game, newGame, displayScore, addTurn };
+
+module.exports = { game, newGame, displayScore, addTurn, lightsOn };
